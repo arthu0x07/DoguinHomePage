@@ -15,12 +15,22 @@ const Container = styled.section`
   padding-top: 20rem;
   padding-bottom: 20rem;
 
+  @media (max-width: 648px) {
+    padding-top: 10rem;
+
+  }
+
   h2 {
     font-family: "Saira";
     font-size: 4.81rem;
     color: #f2f2f2;
 
     padding: 0rem 8rem;
+
+    @media (max-width: 648px) {
+      text-align: center;
+      font-size: 8vw;
+    }
   }
 
   .Container-ButtonSearch {

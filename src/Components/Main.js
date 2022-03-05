@@ -16,10 +16,18 @@ const Container = styled.main`
     text-transform: capitalize;
     color: #9d9d9d;
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 0.8rem;
-
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: #2b292c;
+
+    @media (max-width: 1340px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2.8rem;
+      padding: 0 20px;
+    }
   }
 
   div {
@@ -28,10 +36,29 @@ const Container = styled.main`
     width: 100%;
     display: flex;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     img {
       width: 800px;
       height: auto;
       filter: contrast(1.1);
+
+      @media (max-width: 1340px) {
+        width: 600px;
+      }
+
+      @media (max-width: 1024px) {
+        width: 452px;
+        margin-left: 8%;
+      }
+
+      @media (max-width: 620px) {
+        width: 430px;
+      }
     }
 
     p {
@@ -42,6 +69,28 @@ const Container = styled.main`
       align-self: center;
       position: relative;
       right: 50px;
+
+      @media (max-width: 1340px) {
+        font-size: 4rem;
+        width: 700px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        right: unset;
+        text-align: center;
+        padding-bottom: 7rem;
+        padding-top: 2rem;
+        padding-left: 1rem;
+      }
+
+      @media (max-width: 620px) {
+        font-size: 2.3rem;
+        width: 100%;
+      }
     }
 
     a {
@@ -55,6 +104,7 @@ const Container = styled.main`
       position: absolute;
       right: 5%;
       bottom: 10%;
+      z-index: 2;
 
       border-radius: 7px;
 
@@ -64,6 +114,14 @@ const Container = styled.main`
 
       :hover {
         background-color: #383737;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 2.4rem;
+      }
+
+      @media (max-width: 768px) {
+        position: unset;
       }
     }
   }

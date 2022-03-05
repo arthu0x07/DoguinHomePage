@@ -10,7 +10,7 @@ const Container = styled.section`
   background-color: var(--background-gray);
   margin: 0 auto;
   min-height: 500px;
-  padding-top: 20rem;
+  padding-top: 10rem;
 
   h2 {
     font-family: "Saira";
@@ -18,6 +18,24 @@ const Container = styled.section`
     color: #737373;
 
     padding: 0rem 8rem;
+
+    @media (max-width: 1024px) {
+      padding: 0rem 3rem;
+    }
+
+    @media (max-width: 768px) {
+      z-index: 2;
+      position: relative;
+    }
+
+    @media (max-width: 620px) {
+      font-size: 3.81rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2.81rem;
+      padding: 0rem 2rem;
+    }
   }
 
   div {
@@ -32,11 +50,40 @@ const Container = styled.section`
     color: #8d8d8d;
     position: relative;
 
+    @media (max-width: 1024px) {
+      width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      width: unset;
+      font-size: 3rem;
+    }
+
+    @media (max-width: 500px) {
+      padding-top: 4rem;
+      padding-bottom: 12rem;
+    }
+
     .BoneImage {
       position: absolute;
       top: -29%;
       left: 37%;
       z-index: 0;
+
+      @media (max-width: 1024px) {
+        top: -21%;
+      }
+
+      @media (max-width: 620px) {
+        top: -21%;
+        left: 8%;
+      }
+
+      @media (max-width: 400px) {
+        width: 374px;
+        top: -18%;
+        left: 18%;
+      }
     }
 
     p {
@@ -44,6 +91,28 @@ const Container = styled.section`
       background-color: var(--background-gray);
       z-index: 3;
       padding: 0 9rem;
+
+      @media (max-width: 1024px) {
+        line-height: 55px;
+        text-align: start;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0px 6rem;
+        line-height: 50px;
+        text-align: start;
+      }
+
+      @media (max-width: 620px) {
+        font-size: 2.3rem;
+        padding: 0px 2rem;
+      }
+
+      @media (max-width: 500px) {
+        padding: 0px 1rem;
+        font-size: 2rem;
+        line-height: 46px;
+      }
     }
 
     .RationImage {
