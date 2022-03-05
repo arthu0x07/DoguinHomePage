@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import ImageButton from "../Assets/images/ImageButton.png";
@@ -102,13 +102,22 @@ const Container = styled.section`
 `;
 
 export function CheckPets() {
-  console.log(PetList);
+  const [petList, setPetList] = useState([]);
+
+  function handleSetPetLists() {
+    setPetList(PetList);
+  }
 
   return (
     <Container>
       <h2>Confira nossos pets</h2>
 
-      <div className="Container-ButtonSearch">
+      <div
+        onClick={() => {
+          handleSetPetLists();
+        }}
+        className="Container-ButtonSearch"
+      >
         <img
           src={ImageButton}
           alt="Imagem de um botão arredondado com um desenho de gato e cachorro"
@@ -116,23 +125,17 @@ export function CheckPets() {
       </div>
 
       <section className="Container-Animals">
-        <div className="CardAnimal">
-          <img src={ImagemDog} />
+        {petList.lenght != 0 &&
+          petList.map((pet, index) => {
+            return (
+              <div className="CardAnimal" id={`pet-${index}`}>
+                <img src={pet.image} />
 
-          <h3>EaiJair</h3>
-          <p>Desenvolvedor Front-End Jr.</p>
-        </div>
-
-        {PetList.map((pet, index) => {
-          return (
-            <div className="CardAnimal" id={`pet-${index}`}>
-              <img src={pet.image} />
-
-              <h3>{pet.name}</h3>
-              <p>{pet.occupation}</p>
-            </div>
-          );
-        })}
+                <h3>{pet.name}</h3>
+                <p>{pet.occupation}</p>
+              </div>
+            );
+          })}
       </section>
     </Container>
   );
