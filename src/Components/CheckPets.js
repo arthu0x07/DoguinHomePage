@@ -120,7 +120,7 @@ export function CheckPets() {
 
   return (
     <Container>
-      <h2>Confira nossos pets</h2>
+      <h2 id="CheckPets">Confira nossos pets</h2>
 
       <div
         onClick={() => {

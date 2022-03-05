@@ -160,7 +160,7 @@ export function Main() {
       <div>
         <img src={fotodog1} alt="Foto de um pastor alemão caramelo" />
         <p>Adote seu cachorro programador agora!</p>
-        <a href="">Adote já</a>
+        <a href="#CheckPets">Adote já</a>
       </div>
     </Container>
   );
