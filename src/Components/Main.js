@@ -14,7 +14,7 @@ const Container = styled.main`
     font-family: "Salsa";
 
     text-transform: capitalize;
-    color: #ffffff;
+    color: #9d9d9d;
     text-align: center;
     padding-top: 4rem;
     padding-bottom: 0.8rem;

@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
     :root{
         --background-gray: #EFEFEF;
     }
@@ -19,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     body::-webkit-scrollbar {
         width: 15px;        
         border-radius: 5px;
+        overflow: hidden;
     }
 
     body::-webkit-scrollbar-track {
@@ -29,5 +29,9 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #85b948;    
         border-radius: 20px;    
         border: 4px solid #EFEFEF;
+    }
+
+    #root{
+        overflow: hidden;
     }
 `;
